@@ -48,7 +48,7 @@ while (pass_count <= 0):
   print(f"\n{bcolors.WARNING}Oops! The number of passwords couldn't be 0 or a negative number. Please enter another one.{bcolors.ENDC}\n")
   pass_count = int(input(f"{bcolors.HEADER} # How many passwords do you need (EX:05): {bcolors.ENDC}"))
   
-print("\n" + brake_line + "\n")
+print("\n" + break_line + "\n")
 
 for i in range(pass_count):
   password = "".join(random.sample(structure, length))
@@ -56,4 +56,4 @@ for i in range(pass_count):
   time.sleep(0.15)
   print(f" 🔐 Your password number(" + str(pass_id) + ") is: " + f"{bcolors.OKGREEN}" + password + f"{bcolors.ENDC}")
   
-print("\n" + brake_line + "\n")
+print("\n" + break_line + "\n")
