@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import random, time
+import string, random, time, sys
 
 class bcolors:
     HEADER = '\033[95m'
@@ -11,11 +11,24 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-lower_case = "abcdefghijklmnopqrstuvwxyz"
-upper_case = "ABCDEFGHIJKLMNOPWRSTUVWXYZ"
-numbers = "0123456789"
-symbols = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-structure = lower_case + numbers + symbols + upper_case
+def typingPrint(text):
+  for character in text:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.05)
+
+def typingInput(text):
+  for character in text:
+    sys.stdout.write(character)
+    sys.stdout.flush()
+    time.sleep(0.05)
+  value = input()  
+  return value
+
+letters = string.ascii_letters
+numbers = string.digits
+symbols = string.punctuation
+structure = letters + numbers + symbols
 pass_id = 0
 break_line = "-----------------------------------------------------------"
 banner = f'''
@@ -38,21 +51,21 @@ banner = f'''
 
 print(banner)
 
-length = int(input(f"{bcolors.HEADER} 📝 Password length do you prefer (recomended:12): {bcolors.ENDC}"))
+length = int(typingInput(f"{bcolors.HEADER} 📝 Password length do you prefer (recomended:12): {bcolors.ENDC}"))
 
 while (length >= 95 or length <= 0):
   print(f"\n{bcolors.WARNING} ❌ Oops! Password length is not in range. Please enter a number between 0-94.{bcolors.ENDC}\n")
-  length = int(input(f"{bcolors.HEADER} 📝 Password length do you prefer (recomended:12): {bcolors.ENDC}"))
+  length = int(typingInput(f"{bcolors.HEADER} 📝 Password length do you prefer (recomended:12): {bcolors.ENDC}"))
   
-pass_count = int(input(f"{bcolors.HEADER}\n 📝 How many passwords do you need (EX:05): {bcolors.ENDC}"))
+pass_count = int(typingInput(f"{bcolors.HEADER}\n 📝 How many passwords do you need (EX:05): {bcolors.ENDC}"))
 
 while (pass_count <= 0):
   print(f"\n{bcolors.WARNING} ❌ Oops! The number of passwords couldn't be 0 or a negative number. Please enter another one.{bcolors.ENDC}\n")
-  pass_count = int(input(f"{bcolors.HEADER} 📝 How many passwords do you need (EX:05): {bcolors.ENDC}"))
+  pass_count = int(typingInput(f"{bcolors.HEADER} 📝 How many passwords do you need (EX:05): {bcolors.ENDC}"))
   
 print("\n" + break_line + "\n")
 
-print(" Status: ♻️ Generating...")
+typingPrint(" Status: ♻️ Generating...\n")
 
 print("\n" + break_line + "\n")
 time.sleep(1)
@@ -65,6 +78,6 @@ for i in range(pass_count):
 
 print("\n" + break_line + "\n")
 
-print(" Status: ✅ Done")
+typingPrint(" Status: ✅ Done\n")
 
 print("\n" + break_line + "\n")
