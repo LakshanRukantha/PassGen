@@ -1,8 +1,9 @@
 # PassGen
+Random password generator tool
 
 ## Introduction
 
-Passwords pose a significant security risk. According to a recent report, weak or stolen passwords account for more than 80% of hacking-related breaches. So, if you want to protect your personal information and assets, creating secure passwords is an important first step. That's where the PassGen Password Generator comes in handy. Passwords that are impossible to crack contain a variety of characters (numbers, letters, and symbols). Making your passwords unique for each website or app also aids in the prevention of hacking. This password generator tool is available for use on your Windows, Mac, or Linux computer, as well as your iOS or Android device. Your passwords are never transmitted over the internet.
+> Passwords pose a significant security risk. According to a recent report, weak or stolen passwords account for more than 80% of hacking-related breaches. So, if you want to protect your personal information and assets, creating secure passwords is an important first step. That's where the PassGen Password Generator comes in handy. Passwords that are impossible to crack contain a variety of characters (numbers, letters, and symbols). Making your passwords unique for each website or app also aids in the prevention of hacking. This password generator tool is available for use on your Windows, Mac, or Linux computer, as well as your iOS or Android device. Your passwords are never transmitted over the internet.
 
 ## Features
 
